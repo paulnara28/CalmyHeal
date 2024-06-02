@@ -1,5 +1,5 @@
 import React from "react";
-import GambarHero from "../assets/image/gambar hero.png";
+import GambarHero from "../assets/image/hero.png";
 
 export default function Hero() {
   return (

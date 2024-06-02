@@ -1,5 +1,5 @@
 import React from "react";
-import GambarMeditasi from "../assets/image/gambar meditasi.png";
+import GambarMeditasi from "../assets/image/gambar hero.png";
 
 export default function Meditation() {
   return (
