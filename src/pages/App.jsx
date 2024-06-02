@@ -13,14 +13,15 @@ import ChallengeBacaBuku from "./ChallengeBacaBuku/ChallengeBacaBuku";
 import Artikelolahragajalankaki from "./ArtikelOlahraga/Artikelolahragajalankaki";
 import Artikelolahragayoga from "./ArtikelOlahragayoga/Artikelolahragayoga";
 import Artikelolahragabersepeda from "./ArtikelOlahragabersepeda/Artikelolahragabersepeda";
+import Tou from "./syarat dan ketentuan/Tou";
 
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Register" element={<Register></Register>} />
-        <Route path="/Login" element={<Login></Login>} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Calmy-Challenge" element={<CalmyChallenge />} />
         <Route path="/Calmy-Edu" element={<Calmyedu />} />
         <Route path="/Calmy-Meditation" element={<CalmyMeditation />} />
@@ -37,6 +38,7 @@ export default function App() {
           path="/Artikelolahragabersepeda"
           element={<Artikelolahragabersepeda />}
         />
+        <Route path="/Syarat-dan-Ketentuan" element={<Tou />} />
       </Routes>
     </Router>
   );

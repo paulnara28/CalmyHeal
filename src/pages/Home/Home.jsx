@@ -5,6 +5,7 @@ import Meditation from "../../component/Meditation";
 import Education from "../../component/Education";
 import Faq from "../../component/Faq";
 import Footer from "../../component/Footer";
+import Testimoni from "../../component/Testimoni";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Meditation />
       <Education />
+      <Testimoni />
       <Faq />
       <Footer />
     </div>

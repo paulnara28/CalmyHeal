@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/image/Logo-mobile.png";
+import Icon from "../assets/icon/Icon";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -81,14 +82,37 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-1 text-xs lg:text-base lg:w-[150px]">
           <h1 className="font-bold">Link</h1>
-          <h2 className="font-extralight cursor-pointer">Kebijakan Privasi</h2>
+          <Link to="/Syarat-dan-Ketentuan">
+            <h2 className="font-extralight cursor-pointer">
+              Kebijakan Privasi
+            </h2>
+          </Link>
           <h2 className="font-extralight cursor-pointer">Panduan</h2>
         </div>
         <div className="flex flex-col gap-1 text-xs lg:text-base lg:w-[210px]">
-          <h1 className="font-bold">Lokasi</h1>
-          <p className="font-extralight">
-            Jakarta Pusat, Jl. KH. Mas Mansyur No. 121
-          </p>
+          <h1 className="font-bold">Sosial Media</h1>
+          <div className="flex space-x-2">
+            <div className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-seventh-25 rounded-full flex items-center justify-center">
+              <div className="w-[15px] h-[15px] lg:w-[20px] lg:h-[20px]">
+                <Icon name="youtube" />
+              </div>
+            </div>
+            <div className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-seventh-25 rounded-full flex items-center justify-center">
+              <div className="w-[15px] h-[15px] lg:w-[20px] lg:h-[20px]">
+                <Icon name="facebook" />
+              </div>
+            </div>
+            <div className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-seventh-25 rounded-full flex items-center justify-center">
+              <div className="w-[15px] h-[15px] lg:w-[20px] lg:h-[20px]">
+                <Icon name="instagram" />
+              </div>
+            </div>
+            <div className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-seventh-25 rounded-full flex items-center justify-center">
+              <div className="w-[15px] h-[15px] lg:w-[20px] lg:h-[20px]">
+                <Icon name="twitter" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
