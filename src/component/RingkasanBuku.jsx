@@ -7,8 +7,6 @@ export default function RingkasanBuku({
   judul,
   pengarang,
   bab,
-  dilihat,
-  vote,
   topik1,
   isi1,
   topik2,
@@ -33,14 +31,12 @@ export default function RingkasanBuku({
   buku,
   buku2,
   judulrek1,
-  dilihat2,
-  vote2,
   ringkasan,
   judulrek2,
-  dilihat3,
-  vote3,
   ringkasan2,
   selamat,
+  next1,
+  next2,
   showButton = true,
   showSelamat = true,
   showkonten = true,
@@ -139,33 +135,36 @@ export default function RingkasanBuku({
         {/*rekomendasi buku*/}
         <div className="w-[318px]  lg:h-[390px] shadow-lg mx-auto p-5 flex flex-col gap-2 lg:gap-5 rounded-lg">
           <h1 className="text-base font-bold">Kamu Akan Menyukai Ini</h1>
-          <div className="flex gap-3">
-            <img
-              src={buku}
-              alt="buku"
-              width={86}
-              height={123}
-              className="rounded-md shadow-md"
-            />
-            <div className="my-auto">
-              <h1 className="text-base">{judulrek1}</h1>
-
-              <p className="text-[10px]">{ringkasan}</p>
+          <Link to={next1}>
+            <div className="flex gap-3">
+              <img
+                src={buku}
+                alt="buku"
+                width={86}
+                height={123}
+                className="rounded-md shadow-md"
+              />
+              <div className="my-auto">
+                <h1 className="text-base">{judulrek1}</h1>
+                <p className="text-[10px]">{ringkasan}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-3">
-            <img
-              src={buku2}
-              alt="buku"
-              width={86}
-              height={123}
-              className="rounded-md shadow-md"
-            />
-            <div className="my-auto">
-              <h1 className="text-base">{judulrek2}</h1>
-              <p className="text-[10px]">{ringkasan2}</p>
+          </Link>
+          <Link to={next2}>
+            <div className="flex gap-3">
+              <img
+                src={buku2}
+                alt="buku"
+                width={86}
+                height={123}
+                className="rounded-md shadow-md"
+              />
+              <div className="my-auto">
+                <h1 className="text-base">{judulrek2}</h1>
+                <p className="text-[10px]">{ringkasan2}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
