@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        Meditation: "url('/src/assets/image/backgroundmeditasi.png')",
+      },
       colors: {
         primary: "#04364A",
         secondary: "#176B87",

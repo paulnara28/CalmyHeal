@@ -171,6 +171,105 @@ const Icon = ({ name, className }) => {
             />
           </svg>
         );
+      case "arrow-left":
+        return (
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.625 10.5H4.375"
+              stroke="#04364A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.5 16.625L4.375 10.5L10.5 4.375"
+              stroke="#04364A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        );
+      case "kategori":
+        return (
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 21 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_4272_26281)">
+              <path
+                d="M4.93269 8.61538C7.03562 8.61538 8.74038 6.91062 8.74038 4.80769C8.74038 2.70477 7.03562 1 4.93269 1C2.82977 1 1.125 2.70477 1.125 4.80769C1.125 6.91062 2.82977 8.61538 4.93269 8.61538Z"
+                stroke="#04364A"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.3175 8.61538C17.4204 8.61538 19.1252 6.91062 19.1252 4.80769C19.1252 2.70477 17.4204 1 15.3175 1C13.2145 1 11.5098 2.70477 11.5098 4.80769C11.5098 6.91062 13.2145 8.61538 15.3175 8.61538Z"
+                stroke="#04364A"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.93269 19.0002C7.03562 19.0002 8.74038 17.2954 8.74038 15.1925C8.74038 13.0895 7.03562 11.3848 4.93269 11.3848C2.82977 11.3848 1.125 13.0895 1.125 15.1925C1.125 17.2954 2.82977 19.0002 4.93269 19.0002Z"
+                stroke="#04364A"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.3175 19.0002C17.4204 19.0002 19.1252 17.2954 19.1252 15.1925C19.1252 13.0895 17.4204 11.3848 15.3175 11.3848C13.2145 11.3848 11.5098 13.0895 11.5098 15.1925C11.5098 17.2954 13.2145 19.0002 15.3175 19.0002Z"
+                stroke="#04364A"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_4272_26281">
+                <rect
+                  width="19.9997"
+                  height="20.0001"
+                  fill="white"
+                  transform="translate(0.125)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        );
+      case "jam":
+        return (
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="7" stroke="#33363F" stroke-width="2" />
+            <path
+              d="M5.96472 3.1363C5.2865 3.31803 4.66807 3.67508 4.17157 4.17157C3.67508 4.66807 3.31803 5.2865 3.1363 5.96472"
+              stroke="#33363F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M18.0353 3.1363C18.7135 3.31803 19.3319 3.67508 19.8284 4.17157C20.3249 4.66807 20.682 5.2865 20.8637 5.96472"
+              stroke="#33363F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M12 8V11.75C12 11.8881 12.1119 12 12.25 12H15"
+              stroke="#33363F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        );
 
       default:
         return null;
