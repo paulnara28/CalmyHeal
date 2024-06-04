@@ -27,6 +27,12 @@ import MeditasiTidur2 from "./Detail Meditasi/Meditasi Tidur/MeditasiTidur2";
 import MeditasiMood1 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood1";
 import MeditasiMood2 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood2";
 import MeditasiMood3 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood3";
+import KebijakanPrivasi from "./Kebijakan Privasi/KebijakanPrivasi";
+import Filosofi1 from "./Ringkasan Buku/Filosofi1";
+import Filosofi2 from "./Ringkasan Buku/Filosofi2";
+import Berani from "./Ringkasan Buku/Berani";
+import Love from "./Ringkasan Buku/Love";
+import Seni from "./Ringkasan Buku/Seni";
 
 export default function App() {
   return (
@@ -52,6 +58,7 @@ export default function App() {
           element={<Artikelolahragabersepeda />}
         />
         <Route path="/Syarat-dan-Ketentuan" element={<Tou />} />
+        <Route path="/Kebijakan-Privasi" element={<KebijakanPrivasi />} />
         <Route path="/Meditasi-Utama" element={<MeditasiUtama />} />
         <Route path="/Meditasi-Fokus-1" element={<MeditasiFokus1 />} />
         <Route path="/Meditasi-Fokus-2" element={<MeditasiFokus2 />} />
@@ -65,6 +72,14 @@ export default function App() {
         <Route path="/Meditasi-Mood-1" element={<MeditasiMood1 />} />
         <Route path="/Meditasi-Mood-2" element={<MeditasiMood2 />} />
         <Route path="/Meditasi-Mood-3" element={<MeditasiMood3 />} />
+        <Route path="/Filosofi-Teras-1" element={<Filosofi1 />} />
+        <Route path="/Filosofi-Teras-2" element={<Filosofi2 />} />
+        <Route path="/Berani-Tidak-Disukai" element={<Berani />} />
+        <Route path="/Love-Your-Self" element={<Love />} />
+        <Route
+          path="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
+          element={<Seni />}
+        />
       </Routes>
     </Router>
   );
