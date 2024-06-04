@@ -14,6 +14,19 @@ import Artikelolahragajalankaki from "./ArtikelOlahraga/Artikelolahragajalankaki
 import Artikelolahragayoga from "./ArtikelOlahragayoga/Artikelolahragayoga";
 import Artikelolahragabersepeda from "./ArtikelOlahragabersepeda/Artikelolahragabersepeda";
 import Tou from "./syarat dan ketentuan/Tou";
+import MeditasiUtama from "./Halaman Utama Meditasi/MeditasiUtama";
+import MeditasiFokus1 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus1";
+import MeditasiFokus2 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus2";
+import MeditasiFokus3 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus3";
+import MeditasiStres1 from "./Detail Meditasi/Meditasi Stres/MeditasiStres1";
+import MeditasiStres2 from "./Detail Meditasi/Meditasi Stres/MeditasiStres2";
+import MeditasiTidur3 from "./Detail Meditasi/Meditasi Tidur/MeditasiTidur3";
+import MeditasiTidur1 from "./Detail Meditasi/Meditasi Tidur/MeditasiTidur1";
+import MeditasiStres3 from "./Detail Meditasi/Meditasi Stres/MeditasiStres3";
+import MeditasiTidur2 from "./Detail Meditasi/Meditasi Tidur/MeditasiTidur2";
+import MeditasiMood1 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood1";
+import MeditasiMood2 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood2";
+import MeditasiMood3 from "./Detail Meditasi/Meditasi Untuk Mood/MeditasiMood3";
 
 export default function App() {
   return (
@@ -39,6 +52,19 @@ export default function App() {
           element={<Artikelolahragabersepeda />}
         />
         <Route path="/Syarat-dan-Ketentuan" element={<Tou />} />
+        <Route path="/Meditasi-Utama" element={<MeditasiUtama />} />
+        <Route path="/Meditasi-Fokus-1" element={<MeditasiFokus1 />} />
+        <Route path="/Meditasi-Fokus-2" element={<MeditasiFokus2 />} />
+        <Route path="/Meditasi-Fokus-3" element={<MeditasiFokus3 />} />
+        <Route path="/Meditasi-Stres-1" element={<MeditasiStres1 />} />
+        <Route path="/Meditasi-Stres-2" element={<MeditasiStres2 />} />
+        <Route path="/Meditasi-Stres-3" element={<MeditasiStres3 />} />
+        <Route path="/Meditasi-Tidur-1" element={<MeditasiTidur1 />} />
+        <Route path="/Meditasi-Tidur-2" element={<MeditasiTidur2 />} />
+        <Route path="/Meditasi-Tidur-3" element={<MeditasiTidur3 />} />
+        <Route path="/Meditasi-Mood-1" element={<MeditasiMood1 />} />
+        <Route path="/Meditasi-Mood-2" element={<MeditasiMood2 />} />
+        <Route path="/Meditasi-Mood-3" element={<MeditasiMood3 />} />
       </Routes>
     </Router>
   );
