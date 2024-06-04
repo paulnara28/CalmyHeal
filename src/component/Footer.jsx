@@ -82,12 +82,14 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-1 text-xs lg:text-base lg:w-[150px]">
           <h1 className="font-bold">Link</h1>
-          <Link to="/Syarat-dan-Ketentuan">
+          <Link to="/Kebijakan-Privasi">
             <h2 className="font-extralight cursor-pointer">
               Kebijakan Privasi
             </h2>
           </Link>
-          <h2 className="font-extralight cursor-pointer">Panduan</h2>
+          <Link to="/Syarat-dan-Ketentuan">
+            <h2 className="font-extralight cursor-pointer">Panduan</h2>
+          </Link>
         </div>
         <div className="flex flex-col gap-1 text-xs lg:text-base lg:w-[210px]">
           <h1 className="font-bold">Sosial Media</h1>
