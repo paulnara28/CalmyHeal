@@ -3,7 +3,7 @@ import Navbar from "../../component/Navbar";
 import RingkasanBuku from "../../component/RingkasanBuku";
 import Footer from "../../component/Footer";
 import buku from "../../assets/image/buku3.png";
-import buku2 from "../../assets/image/buku2.png";
+import buku2 from "../../assets/image/buku1.png";
 
 export default function Seni() {
   return (
@@ -36,13 +36,15 @@ export default function Seni() {
         penutup="Melalui serangkaian prinsip dan pandangan yang tidak biasa, Manson membantu untuk mengurangi stres, mengatasi rasa cemas, dan menemukan kebahagiaan yang sejati dengan bersikap bodo amat terhadap hal-hal yang tidak penting. Manson mendorong kita untuk hidup dengan lebih bebas dan penuh makna, mengabaikan hal-hal yang tidak penting, dan fokus pada apa yang benar-benar membuat hidup kita berharga."
         buku={buku}
         buku2={buku2}
-        judulrek1="Berani Tidak Disukai"
-        judulrek2="Sebuah Seni Untuk Bersikap Bodo Amat"
+        judulrek1="Filosofi Teras"
+        judulrek2="Berani Tidak Disukai"
         ringkasan="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         ringkasan2="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         selamat="RINGKASAN SEBUAH SENI UNTUK BERSIKAP BODO AMAT - END"
         showSelamat={true}
         showButton={false}
+        next1="/Filosofi-Teras-1"
+        next2="/Berani-Tidak-Disukai"
       />
       <Footer />
     </div>

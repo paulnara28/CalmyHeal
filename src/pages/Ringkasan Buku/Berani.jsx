@@ -35,6 +35,8 @@ export default function Berani() {
         ringkasan="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         ringkasan2="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         selamat="RINGKASAN BERANI TIDAK DISUKAI - END"
+        next1="/Filosofi-Teras-1"
+        next2="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
         showSelamat={true}
         showButton={false}
         showkonten={true}
