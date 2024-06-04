@@ -10,7 +10,7 @@ import Gambaryoga4 from "../../assets/image/gambaryoga4.png";
 import Gambaryoga5 from "../../assets/image/gambaryoga5.png";
 import iconring from "../../assets/image/iconring.png";
 import iconleft from "../../assets/image/iconleft.png";
-
+import UploadFoto from "../../component/UploadFoto";
 
 const ArtikelOlahragaYoga = () => {
   return (
@@ -198,6 +198,7 @@ const ArtikelOlahragaYoga = () => {
             <h2 className="mb-5 text-center text-[#04364A] text-3xl font-bold mt-15">
               Yeay Aktifitas Jalan Kaki Telah Selesai !!
             </h2>
+            <UploadFoto />
             <form action="" method="POST">
               <div className="mb-5">
                 <label

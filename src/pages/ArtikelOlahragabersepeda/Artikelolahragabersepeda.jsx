@@ -10,6 +10,7 @@ import Gambarsepeda4 from "../../assets/image/gambarsepeda4.png";
 import Gambarsepeda5 from "../../assets/image/gambarsepeda5.png";
 import iconring from "../../assets/image/iconring.png";
 import iconleft from "../../assets/image/iconleft.png";
+import UploadFoto from "../../component/UploadFoto";
 
 const ArtikelOlahragaBersepeda = () => {
   return (
@@ -207,6 +208,7 @@ const ArtikelOlahragaBersepeda = () => {
             <h2 className="mb-5 text-center text-[#04364A] text-3xl font-bold mt-15">
               Yeay Aktifitas Jalan Kaki Telah Selesai !!
             </h2>
+            <UploadFoto />
             <form action="" method="POST">
               <div className="mb-5">
                 <label
