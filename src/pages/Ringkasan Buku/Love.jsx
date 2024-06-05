@@ -37,6 +37,7 @@ export default function Love() {
         selamat="RINGKASAN LOVE YOUR SELF - END"
         next1="/Berani-Tidak-Disukai"
         next2="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
+        kembali="/Buku-4"
         showSelamat={true}
         showButton={false}
         showkonten={true}

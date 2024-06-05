@@ -37,6 +37,7 @@ export default function RingkasanBuku({
   selamat,
   next1,
   next2,
+  kembali,
   showButton = true,
   showSelamat = true,
   showkonten = true,
@@ -47,7 +48,7 @@ export default function RingkasanBuku({
 }) {
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12">
-      <Link>
+      <Link to={kembali}>
         <button className="w-[96px] h-5 flex gap-1 lg:w-[149px] lg:gap-3">
           <div className="w-4 h-4 my-auto">
             <Icon name="arrow-left" />

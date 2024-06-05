@@ -1,12 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/image/Logo-mobile.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isScrolled) {
+      document.body.style.paddingTop = "64px";
+    } else {
+      document.body.style.paddingTop = "0";
+    }
+  }, [isScrolled]);
 
   return (
-    <nav className="bg-primary px-5 lg:px-12 py-4 flex justify-between lg:items-center ">
+    <nav
+      className={`${
+        isScrolled ? "fixed top-0 w-full z-50" : "relative"
+      } bg-primary px-5 lg:px-12 py-4 flex justify-between lg:items-center transition-all duration-300 ease-in-out`}
+    >
       <div className="flex flex-wrap gap-2">
         <img
           className="w-[50px] h-[36px] lg:w-[66px] lg:h-[47px]"
@@ -73,42 +99,42 @@ function Navbar() {
       >
         <Link
           to="/"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Beranda
         </Link>
         <Link
           to="/Calmy-Challenge"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Calmy Challenge
         </Link>
         <Link
           to="/Calmy-Edu"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Calmy Edu
         </Link>
         <Link
           to="/Calmy-Meditation"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Calmy Meditation
         </Link>
         <Link
           to="/Tentang-Calmy"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Tentang Calmy
         </Link>
         <Link
           to="/Login"
-          className={`${"text-baseBlack"} text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
+          className={`text-primary font-medium font-Montserrat hover:text-primary transition-all duration-200`}
           onClick={() => setIsOpen(false)}
         >
           Login
