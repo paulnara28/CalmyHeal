@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GambarMembacaBuku from "../assets/image/GambarOlahraga.png";
+import GambarMembacaBuku from "../assets/image/membacabuku1.png";
+import iconleft1 from "../assets/image/kiri.png";
+
 
 export default function ArtikelBacaBuku() {
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12 flex flex-col lg:flex-row gap-8">
       <div className="lg:w-1/2">
+        <Link to="/Kategori-Tantangan">
+          <button
+            type="button"
+            className="flex items-center text-base font-semibold text-[#176B87] rounded-xl outline-none hover:shadow-form mb-5"
+          >
+            <img src={iconleft1} alt="IconLeft" className="mr-2" />
+            Kembali
+          </button>
+        </Link>
         <img src={GambarMembacaBuku} alt="GambarMembacaBuku" />
       </div>
       <div className="lg:w-1/2 lg:my-auto flex flex-col">

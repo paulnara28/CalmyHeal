@@ -12,6 +12,7 @@ const populer = [
     deskripsi:
       "Dalam era digital yang kian berkembang, teknologi sangat berdampak terhadap setiap aspek kehidupan.",
     gambar: populer1,
+    link: "../artikeledu", 
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const populer = [
     deskripsi:
       "Stres merupakan suatu keadaan di mana sumber daya yang miliki oleh seseorang tidak dapat mendukung keinginan yang ingin dicapai",
     gambar: populer2,
+    link: "../artikeledu1", 
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const populer = [
     deskripsi:
       "Media sosial sangat sering diakses setiap detiknya bahkan masyarakat khususnya remaja tidak bisa lepas dari media sosial.",
     gambar: populer3,
+    link: "../artikeledu2", 
   },
 ];
 
@@ -57,8 +60,9 @@ export default function Artikelpopuler() {
         <div>
           <div className="flex flex-col gap-5 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-4">
             {populer.map((data, index) => (
-              <div
+              <a
                 key={data.id}
+                href={data.link}
                 className={`rounded-lg bg-fifth cursor-pointer ${
                   index === 0 ? "lg:row-span-2 lg:flex-col" : "flex-row"
                 } flex flex-row lg:flex lg:flex-row h-[125px] lg:h-auto`}
@@ -85,7 +89,7 @@ export default function Artikelpopuler() {
                     {data.deskripsi}
                   </p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

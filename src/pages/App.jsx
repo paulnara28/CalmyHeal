@@ -14,6 +14,17 @@ import Artikelolahragajalankaki from "./ArtikelOlahraga/Artikelolahragajalankaki
 import Artikelolahragayoga from "./ArtikelOlahragayoga/Artikelolahragayoga";
 import Artikelolahragabersepeda from "./ArtikelOlahragabersepeda/Artikelolahragabersepeda";
 import Tou from "./syarat dan ketentuan/Tou";
+import Artikeledu from "./Artikeledu/artikeledu";
+import Artikeledu1 from "./Artikeledu/artikeledu1";
+import Artikeledu2 from "./Artikeledu/artikeledu2";
+import Artikeledu3 from "./Artikeledu/artikeledu3";
+import Artikeledu4 from "./Artikeledu/artikeledu4";
+import Artikeledu5 from "./Artikeledu/artikeledu5";
+import Artikeledu6 from "./Artikeledu/artikeledu6";
+import Artikeledu7 from "./Artikeledu/artikeledu7";
+import Artikeledu8 from "./Artikeledu/artikeledu8";
+import EditJurnalOlahraga from "./Edit Jurnal Olahraga/EditJurnalOlahraga";
+import Rekap from "./Rekap/rekap";
 import MeditasiUtama from "./Halaman Utama Meditasi/MeditasiUtama";
 import MeditasiFokus1 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus1";
 import MeditasiFokus2 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus2";
@@ -58,6 +69,17 @@ export default function App() {
           element={<Artikelolahragabersepeda />}
         />
         <Route path="/Syarat-dan-Ketentuan" element={<Tou />} />
+        <Route path="/Artikeledu" element={<Artikeledu />} />
+        <Route path="/Artikeledu1" element={<Artikeledu1 />} />
+        <Route path="/Artikeledu2" element={<Artikeledu2 />} />
+        <Route path="/Artikeledu3" element={<Artikeledu3 />} />
+        <Route path="/Artikeledu4" element={<Artikeledu4 />} />
+        <Route path="/Artikeledu5" element={<Artikeledu5 />} />
+        <Route path="/Artikeledu6" element={<Artikeledu6 />} />
+        <Route path="/Artikeledu7" element={<Artikeledu7 />} />
+        <Route path="/Artikeledu8" element={<Artikeledu8 />} />
+        <Route path="/EditJurnalOlahraga" element={<EditJurnalOlahraga />} />
+        <Route path="/rekap" element={<Rekap />} />
         <Route path="/Kebijakan-Privasi" element={<KebijakanPrivasi />} />
         <Route path="/Meditasi-Utama" element={<MeditasiUtama />} />
         <Route path="/Meditasi-Fokus-1" element={<MeditasiFokus1 />} />
