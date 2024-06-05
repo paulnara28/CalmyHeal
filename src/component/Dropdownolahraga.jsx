@@ -3,35 +3,35 @@ import PropTypes from "prop-types";
 
 const activityList = [
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
 ];
 
 const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
@@ -39,14 +39,14 @@ const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
     switch (activity) {
       case "Aktivitas Jalan Kaki":
         return "/Artikelolahragajalankaki";
-      case "Aktivitas Bersepeda":
-        return "/Artikelolahragabersepeda";
       case "Aktivitas Yoga":
         return "/Artikelolahragayoga";
       case "Aktivitas Lari":
-        return "/lari";
+        return "/Artikelolahragalari";
       case "Aktivitas Renang":
-        return "/renang";
+        return "/Artikelolahragarenang";
+      case "Aktivitas Bersepeda":
+        return "/Artikelolahragabersepeda";
       default:
         return "#";
     }
@@ -181,3 +181,5 @@ const App = () => {
 };
 
 export default App;
+
+
