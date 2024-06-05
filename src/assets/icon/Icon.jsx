@@ -284,7 +284,7 @@ const Icon = ({ name, className }) => {
             />
           </svg>
         );
-      case "centang":
+        case "centang":
         return (
           <svg
             className="w-full h-full"
@@ -300,8 +300,7 @@ const Icon = ({ name, className }) => {
             />
           </svg>
         );
-
-      default:
+        default:
         return null;
     }
   };

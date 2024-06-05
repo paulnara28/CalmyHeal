@@ -14,6 +14,7 @@ export default {
         fifth: "#F2F2F2",
         sixth: "#28b4d1",
         seventh: "#DAFFFB",
+        eighth: "#4fa7a9",
         "seventh-25": "rgba(218, 255, 251, 0.25)",
       },
     },

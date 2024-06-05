@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import artikel1 from "../assets/image/artikel4.png";
 import artikel2 from "../assets/image/artikel5.png";
 import artikel3 from "../assets/image/artikel6.png";
 import artikel4 from "../assets/image/artikel7.png";
 import artikel5 from "../assets/image/artikel8.png";
-import artikel6 from "../assets/image/artikel9.png";
+import populer4 from "../assets/image/populer4.png";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const terbaru = [
@@ -15,6 +16,7 @@ const terbaru = [
     deskripsi:
       "Stres pada remaja disebabkan oleh beberapa hal, dan beberapa di antaranya seringkali kamu alami loh.",
     gambar: artikel1,
+    link: "../artikeledu3",
   },
   {
     id: 2,
@@ -23,14 +25,16 @@ const terbaru = [
     deskripsi:
       "Stres merupakan suatu keadaan dimana sumber daya seseorang tidak dapat mendukung keinginan yang ingin dicapai.",
     gambar: artikel2,
+    link: "../artikeledu4",
   },
   {
     id: 3,
-    judul: "Manajemen Waktu Untuk Menguramgi Stres",
+    judul: "Manajemen Waktu Untuk Mengurangi Stres",
     tanggal: "16 Maret 2024",
     deskripsi:
       "Ini adalah era yang semakin memahami pentingnya kesehatan mental. Dalam masyarakat yang terus berkembang",
     gambar: artikel3,
+    link: "../artikeledu5",
   },
   {
     id: 4,
@@ -39,6 +43,7 @@ const terbaru = [
     deskripsi:
       "Academic burnout merupakan puncak dari segala rasa capek yang terlalu lama mengendap di tubuh dan pikiran",
     gambar: artikel4,
+    link: "../artikeledu6",
   },
   {
     id: 5,
@@ -47,6 +52,7 @@ const terbaru = [
     deskripsi:
       "Rencanakan Waktu Belajar dengan Bijak: Buatlah jadwal belajar yang teratur dan realistis.",
     gambar: artikel5,
+    link: "../artikeledu7",
   },
   {
     id: 6,
@@ -54,7 +60,8 @@ const terbaru = [
     tanggal: "16 Maret 2024",
     deskripsi:
       "Ada berbagai penyebab sulit berkonsentrasi mulai dari stres, pikiran dan perasaan berlebihan.",
-    gambar: artikel6,
+    gambar: populer4,
+    link: "../artikeledu8",
   },
 ];
 
@@ -97,25 +104,24 @@ const Artikelterbaru = () => {
         } gap-5`}
       >
         {currentItems.map((data) => (
-          <div
-            key={data.id}
-            className="w-[320px] h-[290px] bg-fifth rounded-lg"
-          >
-            <div>
-              <img
-                src={data.gambar}
-                className="rounded-t-lg w-full h-[174px] object-cover"
-                alt={data.judul}
-              />
+          <Link to={data.link} key={data.id} className="no-underline">
+            <div className="w-[320px] h-[290px] bg-fifth rounded-lg">
+              <div>
+                <img
+                  src={data.gambar}
+                  className="rounded-t-lg w-full h-[174px] object-cover"
+                  alt={data.judul}
+                />
+              </div>
+              <div className="m-2">
+                <h3 className="text-xs font-light">{data.tanggal}</h3>
+                <h1 className="text-xl font-bold">{data.judul}</h1>
+                <p className="text-xs font-medium line-clamp-2">
+                  {data.deskripsi}
+                </p>
+              </div>
             </div>
-            <div className="m-2">
-              <h3 className="text-xs font-light">{data.tanggal}</h3>
-              <h1 className="text-xl font-bold">{data.judul}</h1>
-              <p className="text-xs font-medium line-clamp-2">
-                {data.deskripsi}
-              </p>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="bg-primary w-full h-1 mt-6 rounded-md"></div>

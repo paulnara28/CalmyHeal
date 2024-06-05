@@ -3,35 +3,35 @@ import PropTypes from "prop-types";
 
 const activityList = [
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
   "Aktivitas Jalan Kaki",
-  "Aktivitas Bersepeda",
   "Aktivitas Yoga",
   "Aktivitas Lari",
   "Aktivitas Renang",
+  "Aktivitas Bersepeda",
 ];
 
 const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
@@ -39,14 +39,14 @@ const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
     switch (activity) {
       case "Aktivitas Jalan Kaki":
         return "/Artikelolahragajalankaki";
-      case "Aktivitas Bersepeda":
-        return "/Artikelolahragabersepeda";
       case "Aktivitas Yoga":
         return "/Artikelolahragayoga";
       case "Aktivitas Lari":
-        return "/lari";
+        return "/Artikelolahragalari";
       case "Aktivitas Renang":
-        return "/renang";
+        return "/Artikelolahragarenang";
+      case "Aktivitas Bersepeda":
+        return "/Artikelolahragabersepeda";
       default:
         return "#";
     }
@@ -83,7 +83,7 @@ const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
         {isActive && (
           <a
             href={link}
-            className="absolute top-1/2 transform -translate-y-1/2 right-4 mr-4 mt-5"
+            className="absolute top-1/2 transform -translate-y-1/2 right-4 mr-4 mt-5 "
           >
             <svg
               fill="#000000"
@@ -100,11 +100,11 @@ const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
             </svg>
           </a>
         )}
-        <div className="font-body-large-semibold text-center w-full mt-2">{`Hari ${day}`}</div>
+        <div className="font-body-large-semibold text-center w-full mt-2 ">{`Hari ${day}`}</div>
       </div>
       {isActive && (
-        <div className="flex flex-col w-full max-w-xs p-4 mt-2 bg-[#C5EBE9] rounded-lg border border-solid border-[#08ece0] shadow-lg font-Montserrat">
-          <div className="font-medium text-gray-700 text-lg">{activity}</div>
+        <div className="flex flex-col w-full max-w-xs p-4 mt-2 bg-[#C4EAE8] rounded-lg border border-solid  font-Montserrat">
+          <div className="font-medium text-gray-700 text-lg ">{activity}</div>
         </div>
       )}
     </div>
@@ -124,18 +124,62 @@ const App = () => {
   const [completedDays, setCompletedDays] = useState(Array(30).fill(false));
 
   return (
-    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-      {Array.from({ length: 30 }, (_, i) => (
-        <DropdownCard
-          key={i}
-          day={i + 1}
-          isActive={activeDay === i + 1}
-          isCompleted={completedDays[i]}
-          onClick={() => setActiveDay(activeDay === i + 1 ? null : i + 1)}
-        />
-      ))}
+    <div className="min-h-screen p-6 bg-[#F9FAF9]">
+      <h1 className="text-3xl font-bold mb-8 font-Montserrat">
+        Mulai Hari untuk Melakukan Aktifitas Olahraga
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-20">
+        {Array.from({ length: 30 }, (_, i) => (
+          <DropdownCard
+            key={i}
+            day={i + 1}
+            isActive={activeDay === i + 1}
+            isCompleted={completedDays[i]}
+            onClick={() => setActiveDay(activeDay === i + 1 ? null : i + 1)}
+          />
+        ))}
+      </div>
+
+      <nav aria-label="Page navigation example">
+        <ul className="list-style-none flex  font-Montserrat">
+          <li>
+            <a className=" relative block rounded bg-transparent px-3 py-1.5 text-lg font-semi-bold bg-[#04364A] hover:bg-sixth text-[#FFFFFF] transition-all duration-300 dark:text-neutral-400">
+              Kembali
+            </a>
+          </li>
+        </ul>
+
+        <ul className="list-style-none flex justify-end font-Montserrat mb-5">
+          <li>
+            <a className=" relative block rounded px-3 py-1.5 text-lg font-semi-bold bg-[#C5EBE9] hover:bg-sixth text-[#176B87] transition-all duration-300 dark:text-neutral-400">
+              Previous
+            </a>
+          </li>
+          <li aria-current="page">
+            <a
+              className="relative block bg-primary-100 px-3 py-1.5 text-lg font-semi-bold bg-[#04364A] hover:bg-sixth font-medium text-[#FFFFFF] transition-all duration-300"
+              href="#!"
+            >
+              1
+              <span className="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]">
+                (current)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="relative block rounded  px-3 py-1.5 text-lg font-semi-bold bg-[#C5EBE9] text-[#176B87] transition-all duration-300 hover:bg-sixth"
+              href="#!"
+            >
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
 
 export default App;
+
+

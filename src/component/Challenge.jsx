@@ -4,11 +4,11 @@ import challenge from "../assets/image/challenge.png";
 
 export default function Challenge() {
   return (
-    <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12 flex flex-col gap-8 lg:flex-row">
-      <div className="order-1 lg:order-2">
-        <img src={challenge} />
+    <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12 flex flex-col gap-8 lg:flex-row min-h-screen w-full">
+      <div className="order-1 lg:order-2 flex justify-center items-center w-full lg:w-1/2">
+        <img src={challenge} alt="Challenge" className="max-w-full h-auto" />
       </div>
-      <div className="order-2 lg:order-1 lg:w-[553px] lg:my-auto">
+      <div className="order-2 lg:order-1 flex flex-col justify-center items-start w-full lg:w-1/2">
         <h1 className="text-2xl font-bold lg:text-4xl">
           Ikut Challenge dari Calmy Challenge
         </h1>
