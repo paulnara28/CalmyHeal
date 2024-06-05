@@ -37,6 +37,7 @@ export default function Berani() {
         selamat="RINGKASAN BERANI TIDAK DISUKAI - END"
         next1="/Filosofi-Teras-1"
         next2="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
+        kembali="/Buku-2"
         showSelamat={true}
         showButton={false}
         showkonten={true}
