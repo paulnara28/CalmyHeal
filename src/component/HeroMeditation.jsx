@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroMeditation() {
   return (
@@ -10,9 +11,11 @@ export default function HeroMeditation() {
         <p className="text-base font-semibold lg:text-2xl">
           Tingkatkan kualitas tidur, stres, dan banyak lagi.
         </p>
-        <button className="bg-primary hover:bg-sixth text-fourt mx-auto py-2 rounded-xl w-[135px] text-sm lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px]">
-          Mulai Challenge
-        </button>
+        <Link to="/Meditasi-Utama">
+          <button className="bg-primary hover:bg-sixth text-fourt mx-auto py-2 rounded-xl w-[135px] text-sm lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px]">
+            Mulai Challenge
+          </button>
+        </Link>
       </div>
     </div>
   );
