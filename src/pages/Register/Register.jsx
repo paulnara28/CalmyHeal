@@ -20,7 +20,7 @@ function Register() {
       <div className="flex md:w-1/2 justify-center py-10 items-center bg-white ">
         <form className="bg-white">
           <h1 className="text-gray-800 font-bold text-2xl mb-5">
-            Login to Your Account
+            Daftar Akun Sekarang
           </h1>
           <div className="flex space-x-4 justify-center items-end bg-white border-2 text-gray-600 py-2 rounded-md transition duration-100 mb-5">
             <img
@@ -28,10 +28,10 @@ function Register() {
               src="https://i.imgur.com/arC60SB.png"
               alt=""
             />
-            <button>Continue with Google</button>
+            <button>Masuk dengan Google</button>
           </div>
           <p className="text-sm font-normal text-gray-600 mb-7">
-            ------------- Or Sign in with Email -------------
+            ------------- Atau masuk dengan E-mail -------------
           </p>
           <label className="block text-md mb-2 my-3" htmlFor="email">
             Nama Lengkap
@@ -58,7 +58,7 @@ function Register() {
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
-            No Handphone
+            No handphone
           </label>
           <div className="flex items-center border-2 py-2 px-3 rounded-1xl mb-4">
             <input
@@ -70,7 +70,7 @@ function Register() {
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
-            Password
+            Kata Sandi
           </label>
           <div className="flex items-center border-2 py-2 px-3 rounded-1xl mb-5">
             <input
@@ -91,10 +91,10 @@ function Register() {
                   accentColor: "#02607E",
                 }}
               />
-              <span className="text-sm ml-1">Remember Me</span>
+              <span className="text-sm ml-1">Ingat saya</span>
             </div>
-            <span className="text-sm ml-1 text-blue-700 hover:underline cursor-pointer">
-              Forgot password?
+            <span className="text-sm ml-1 text-[#3431A2] hover:underline cursor-pointer">
+              Lupa Kata Sandi?
             </span>
           </div>
 
@@ -103,14 +103,14 @@ function Register() {
               type="submit"
               className="block w-full bg-[#02607E] mt-4 py-2 rounded-2xl text-white font-semibold mb-2"
             >
-              Create Account
+              Daftar
             </button>
           </Link>
           <div>
-            <span className="text-sm ml-1"> All ready have an account?</span>
+            <span className="text-sm ml-8"> Sudah Punya Akun?</span>
             <Link to="/Login">
-              <span className="text-sm ml-2 text-blue-700 hover:text-blue-500 cursor-pointer">
-                Login Here
+              <span className="text-sm ml-2 text-[#3431A2] hover:text-blue-500 cursor-pointer">
+              Masuk Sekarang
               </span>
             </Link>
           </div>

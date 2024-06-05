@@ -7,10 +7,10 @@ import minggu4 from "../assets/image/minggu4.png";
 
 export default function KategoriBacaBuku() {
   const weeks = [
-    { src: minggu1, label: "Minggu 1", link: " " },
-    { src: minggu2, label: "Minggu 2", link: " " },
-    { src: minggu3, label: "Minggu 3", link: " " },
-    { src: minggu4, label: "Minggu 4", link: " " },
+    { src: minggu1, label: "Buku 1", link: " " },
+    { src: minggu2, label: "Buku 2", link: " " },
+    { src: minggu3, label: "Buku 3", link: " " },
+    { src: minggu4, label: "Buku 4", link: " " },
   ];
 
   return (
@@ -33,6 +33,42 @@ export default function KategoriBacaBuku() {
           </Link>
         ))}
       </div>
+      <nav aria-label="Page navigation example">
+        <ul className="list-style-none flex  font-Montserrat">
+          <li>
+            <a className=" relative block rounded bg-transparent px-3 py-1.5 text-lg font-semi-bold bg-[#04364A] hover:bg-sixth text-[#FFFFFF] transition-all duration-300 dark:text-neutral-400">
+              Kembali
+            </a>
+          </li>
+        </ul>
+
+        <ul className="list-style-none flex justify-end font-Montserrat mb-5">
+          <li>
+            <a className=" relative block rounded px-3 py-1.5 text-lg font-semi-bold bg-[#C5EBE9] hover:bg-sixth text-[#176B87] transition-all duration-300 dark:text-neutral-400">
+              Previous
+            </a>
+          </li>
+          <li aria-current="page">
+            <a
+              className="relative block bg-primary-100 px-3 py-1.5 text-lg font-semi-bold bg-[#04364A] hover:bg-sixth font-medium text-[#FFFFFF] transition-all duration-300"
+              href="#!"
+            >
+              1
+              <span className="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]">
+                (current)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="relative block rounded  px-3 py-1.5 text-lg font-semi-bold bg-[#C5EBE9] text-[#176B87] transition-all duration-300 hover:bg-sixth"
+              href="#!"
+            >
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

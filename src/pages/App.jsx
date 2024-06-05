@@ -23,6 +23,8 @@ import Artikeledu5 from "./Artikeledu/artikeledu5";
 import Artikeledu6 from "./Artikeledu/artikeledu6";
 import Artikeledu7 from "./Artikeledu/artikeledu7";
 import Artikeledu8 from "./Artikeledu/artikeledu8";
+import EditJurnalOlahraga from "./Edit Jurnal Olahraga/EditJurnalOlahraga";
+import Rekap from "./Rekap/rekap";
 
 export default function App() {
   return (
@@ -57,6 +59,8 @@ export default function App() {
         <Route path="/Artikeledu6" element={<Artikeledu6 />} />
         <Route path="/Artikeledu7" element={<Artikeledu7 />} />
         <Route path="/Artikeledu8" element={<Artikeledu8 />} />
+        <Route path="/EditJurnalOlahraga" element={<EditJurnalOlahraga />} />
+        <Route path="/rekap" element={<Rekap />} />
       </Routes>
     </Router>
   );

@@ -51,7 +51,7 @@ function Navbar() {
       </div>
       <Link to="/Login">
         <button className="hidden lg:block bg-fourt text-secondary font-semibold px-4 py-2 rounded-[20px] lg:w-[162px] lg:h-[49px] shadow-md">
-          Login
+          Masuk
         </button>
       </Link>
 
