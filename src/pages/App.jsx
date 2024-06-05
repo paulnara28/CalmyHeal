@@ -44,6 +44,8 @@ import Filosofi2 from "./Ringkasan Buku/Filosofi2";
 import Berani from "./Ringkasan Buku/Berani";
 import Love from "./Ringkasan Buku/Love";
 import Seni from "./Ringkasan Buku/Seni";
+import Artikelolahragalari from "./ArtikelOlahragalari/Artikelolahragalari";
+import Artikelolahragarenang from "./ArtikelOlahragarenang/Artikelolahragarenang";
 
 export default function App() {
   return (
@@ -102,6 +104,8 @@ export default function App() {
           path="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
           element={<Seni />}
         />
+        <Route path="/Artikelolahragalari" element={<Artikelolahragalari />} />
+        <Route path="/Artikelolahragarenang" element={<Artikelolahragarenang />} />
       </Routes>
     </Router>
   );

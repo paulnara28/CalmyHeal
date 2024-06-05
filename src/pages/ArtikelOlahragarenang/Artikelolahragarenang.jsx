@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import Gambaryoga from "../../assets/image/gambaryoga.png";
-import Gambaryoga1 from "../../assets/image/gambaryoga1.png";
-import Gambaryoga2 from "../../assets/image/gambaryoga2.png";
+import Gambarrenang1 from "../../assets/image/renang1.png";
+import Gambarrenang2 from "../../assets/image/renang2.png";
+import Gambarrenang3 from "../../assets/image/renang3.png";
 import iconring from "../../assets/image/iconring.png";
 import iconleft from "../../assets/image/iconleft.png";
 import UploadFoto from "../../component/UploadFoto";
 
-const ArtikelOlahragaYoga = () => {
+const ArtikelOlahragaRenang = () => {
   return (
     <div>
       <Navbar />
@@ -26,51 +26,57 @@ const ArtikelOlahragaYoga = () => {
 
         <section className="mb-32">
           <p className="mb-6 text-center text-3xl font-bold text-[#04364A]">
-            Hari 2 : Panduan Aktifitas Yoga
+            Hari 4 : Panduan Renang
           </p>
           <p className="mb-6 text-center text-[#176B87]">
-            Yoga dapat membantu mengurangi stres, karena aktivitas fisik ini
-            bisa meningkatkan relaksasi. 
+            Renang merupakan salah satu olahraga yang memiliki banyak manfaat
+            dan keuntungan berenang bagi kesehatan tubuh kamu, terutama bagi
+            sistem pernapasan.
           </p>
-
           <div className="flex justify-center">
             <img
               className="w-full max-w-lg rounded-lg"
-              src={Gambaryoga}
-              alt="gambar yoga"
+              src={Gambarrenang1}
+              alt="gambar renang 1"
             />
           </div>
         </section>
-
         <div className="mb-24">
           <div className="mb-16 flex flex-wrap lg:flex-row-reverse items-center">
             <div className="w-full lg:w-6/12 lg:pl-15 mb-6 lg:mb-0">
-              <img src={Gambaryoga1} alt="Gambaryoga1" className="ml-auto" />
+              <img
+                src={Gambarrenang2}
+                alt="Gambarrenang2"
+                className="ml-auto"
+              />
             </div>
             <div className="w-full lg:w-6/12 lg:pr-6 ">
               <h3 className="text-2xl font-bold mb-5 text-[#04364A] text-center">
-                Panduan Yoga
+                Panduan Renang
               </h3>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Temukan tempat yang tenang dan bebas gangguan untuk berlatih
-                  yoga. Pastikan ruangannya cukup luas dan nyaman.
+                  Lakukan pemanasan sebelum masuk ke air. Pemanasan bisa berupa
+                  peregangan ringan atau gerakan dinamis untuk mengurangi risiko
+                  cedera dan mempersiapkan otot.
                 </span>
               </p>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Matras yoga memberikan kenyamanan dan mencegah cedera. Jika
-                  tidak memiliki matras, gunakan permukaan yang tidak licin.
+                  Tentukan gaya renang yang ingin Anda lakukan, seperti gaya
+                  bebas, gaya punggung, gaya dada, atau gaya kupu-kupu. Pilih
+                  gaya yang sesuai dengan kemampuan dan tujuan Anda.
                 </span>
               </p>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Lakukan pemanasan ringan untuk mempersiapkan tubuh. Beberapa
-                  gerakan pemanasan seperti putaran leher, bahu, dan pergelangan
-                  tangan dapat membantu.
+                  Latih teknik pernapasan yang benar. Untuk gaya bebas,
+                  misalnya, bernapaslah secara bergantian ke kanan dan kiri
+                  setiap beberapa kayuhan. Tarik napas melalui mulut di atas
+                  permukaan air dan buang napas di dalam air.
                 </span>
               </p>
             </div>
@@ -78,32 +84,40 @@ const ArtikelOlahragaYoga = () => {
 
           <div className="flex flex-wrap mt-24">
             <div className="w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
-              <img src={Gambaryoga2} alt="Gambaryoga2" />
+              <img src={Gambarrenang3} alt="Gambarrenang3" />
             </div>
             <div className="w-full lg:w-6/12 lg:pl-6">
               <p className="text-[#04364A] mt-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Pernapasan adalah kunci dalam yoga. Usahakan untuk bernapas
-                  dalam dan teratur, melalui hidung. Fokus pada pernapasan dalam
-                  setiap gerakan.
+                  Jaga posisi tubuh yang streamline (sejajar dan lurus) untuk
+                  mengurangi hambatan air. Posisi tubuh yang baik membantu
+                  meningkatkan efisiensi dan kecepatan renang.
                 </span>
               </p>
               <p className="text-[#04364A] mt-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Jangan memaksakan diri dalam melakukan pose. Dengarkan tubuh
-                  Anda dan lakukan modifikasi jika diperlukan. Yoga harus
-                  menyenangkan dan tidak menyebabkan rasa sakit.
+                  Perhatikan gerakan tangan dan kaki sesuai dengan gaya renang
+                  yang kamu pilih. Untuk gaya bebas, lakukan gerakan tangan yang
+                  memutar dengan kuat dan gerakan kaki yang bergantian naik
+                  turun.
                 </span>
               </p>
               <p className="text-[#04364A] mt-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Akhiri sesi yoga dengan relaksasi dalam pose Corpse Pose
-                  (Savasana). Berbaringlah terlentang dengan tangan di samping
-                  tubuh, tutup mata, dan fokus pada pernapasan. Pertahankan pose
-                  ini selama 5-10 menit untuk menenangkan tubuh dan pikiran.
+                  Jika Anda pemula, gunakan alat bantu seperti papan renang atau
+                  pull buoy untuk membantu meningkatkan teknik dan kenyamanan di
+                  air.
+                </span>
+              </p>
+              <p className="text-[#04364A] mt-5">
+                <span className="font-semi-bold flex items-center mr-12">
+                  <img src={iconring} alt="IconRing" className="mr-2" />
+                  Setelah selesai renang, lakukan pendinginan dengan berenang
+                  perlahan atau melakukan peregangan ringan di air. Ini membantu
+                  tubuh pulih dan mengurangi risiko kram atau cedera.
                 </span>
               </p>
             </div>
@@ -150,4 +164,4 @@ const ArtikelOlahragaYoga = () => {
   );
 };
 
-export default ArtikelOlahragaYoga;
+export default ArtikelOlahragaRenang;
