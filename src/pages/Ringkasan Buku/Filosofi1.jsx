@@ -38,6 +38,7 @@ export default function Filosofi1() {
         showkonten5={false}
         next1="/Berani-Tidak-Disukai"
         next2="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
+        kembali="/Buku-1"
       />
       <Footer />
     </div>

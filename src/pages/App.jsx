@@ -44,6 +44,10 @@ import Filosofi2 from "./Ringkasan Buku/Filosofi2";
 import Berani from "./Ringkasan Buku/Berani";
 import Love from "./Ringkasan Buku/Love";
 import Seni from "./Ringkasan Buku/Seni";
+import Buku1 from "./Detail Baca Buku/Buku1";
+import Buku2 from "./Detail Baca Buku/Buku2";
+import Buku3 from "./Detail Baca Buku/Buku3";
+import Buku4 from "./Detail Baca Buku/Buku4";
 
 export default function App() {
   return (
@@ -102,6 +106,10 @@ export default function App() {
           path="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
           element={<Seni />}
         />
+        <Route path="/Buku-1" element={<Buku1 />} />
+        <Route path="/Buku-2" element={<Buku2 />} />
+        <Route path="/Buku-3" element={<Buku3 />} />
+        <Route path="/Buku-4" element={<Buku4 />} />
       </Routes>
     </Router>
   );

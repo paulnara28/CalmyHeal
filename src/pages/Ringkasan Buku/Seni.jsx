@@ -45,6 +45,7 @@ export default function Seni() {
         showButton={false}
         next1="/Filosofi-Teras-1"
         next2="/Berani-Tidak-Disukai"
+        kembali="/Buku-3"
       />
       <Footer />
     </div>
