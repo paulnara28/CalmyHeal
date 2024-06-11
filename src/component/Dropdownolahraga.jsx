@@ -104,7 +104,7 @@ const DropdownCard = ({ day, isActive, isCompleted, onClick, className }) => {
       </div>
       {isActive && (
         <div className="flex flex-col w-full max-w-xs p-4 mt-2 bg-[#C4EAE8] rounded-lg border border-solid  font-Montserrat">
-          <div className="font-medium text-gray-700 text-lg ">{activity}</div>
+          <div className="font-medium text-gray-700 text-base ">{activity}</div>
         </div>
       )}
     </div>
@@ -181,5 +181,3 @@ const App = () => {
 };
 
 export default App;
-
-
