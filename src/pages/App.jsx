@@ -110,10 +110,10 @@ export default function App() {
           path="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
           element={<Seni />}
         />
-        <Route path="/Artikelolahragalari" element={<Artikelolahragalari />} />
+        <Route path="/Artikelolahragalari" element={<Artikelolahragayoga />} />
         <Route
           path="/Artikelolahragarenang"
-          element={<Artikelolahragarenang />}
+          element={<Artikelolahragayoga />}
         />
         <Route path="/Buku-1" element={<Buku1 />} />
         <Route path="/Buku-2" element={<Buku2 />} />
