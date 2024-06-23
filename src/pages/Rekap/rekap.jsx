@@ -14,28 +14,28 @@ const data = [
     tanggal: "8 Mei 2024",
     foto: foto1,
     deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
+      "Hari ini saya melakukan olahraga skipping selama 10 menit. Dengan 100 kali...",
   },
   {
     id: 2,
     tanggal: "9 Mei 2024",
     foto: foto2,
     deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
+      "Hari ini saya melakukan olahraga berjalan kaki selama 30 menit di sekitar...",
   },
   {
     id: 3,
     tanggal: "9 Mei 2024",
     foto: foto3,
     deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
+      "Hari ini saya melakukan kegiatan yoga selama 10 menit sesuai dengan...",
   },
   {
     id: 4,
     tanggal: "10 Mei 2024",
     foto: foto4,
     deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
+      "Hari ini saya melakukan olahraga berjalan kaki selama 25 menit di sekitar...",
   },
 ];
 

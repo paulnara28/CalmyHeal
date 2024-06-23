@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import Gambaryoga from "../../assets/image/gambaryoga.png";
-import Gambaryoga1 from "../../assets/image/gambaryoga1.png";
-import Gambaryoga2 from "../../assets/image/gambaryoga2.png";
+import Gambarlari1 from "../../assets/image/lari1.png";
+import Gambarlari2 from "../../assets/image/lari2.png";
+import Gambarlari3 from "../../assets/image/lari3.png";
 import iconring from "../../assets/image/iconring.png";
 import iconleft from "../../assets/image/iconleft.png";
 import UploadFoto from "../../component/UploadFoto";
 
-const ArtikelOlahragaYoga = () => {
+const ArtikelOlahragaLari = () => {
   return (
     <div>
       <Navbar />
@@ -26,18 +26,18 @@ const ArtikelOlahragaYoga = () => {
 
         <section className="mb-32">
           <p className="mb-6 text-center text-3xl font-bold text-[#04364A]">
-            Hari 2 : Panduan Aktifitas Yoga
+            Hari 3 : Panduan Aktifitas Lari
           </p>
           <p className="mb-6 text-center text-[#176B87]">
-            Yoga dapat membantu mengurangi stres, karena aktivitas fisik ini
-            bisa meningkatkan relaksasi. 
+            Lari adalah salah satu aktivitas fisik yang mudah dan murah yang
+            dapat membantu Anda mengatasi stres.
           </p>
 
           <div className="flex justify-center">
             <img
               className="w-full max-w-lg rounded-lg"
-              src={Gambaryoga}
-              alt="gambar yoga"
+              src={Gambarlari1}
+              alt="gambar sepeda"
             />
           </div>
         </section>
@@ -45,32 +45,38 @@ const ArtikelOlahragaYoga = () => {
         <div className="mb-24">
           <div className="mb-16 flex flex-wrap lg:flex-row-reverse items-center">
             <div className="w-full lg:w-6/12 lg:pl-15 mb-6 lg:mb-0">
-              <img src={Gambaryoga1} alt="Gambaryoga1" className="ml-auto" />
+              <img
+                src={Gambarlari2}
+                alt="Gambar sepeda 2"
+                className="ml-auto"
+              />
             </div>
             <div className="w-full lg:w-6/12 lg:pr-6 ">
               <h3 className="text-2xl font-bold mb-5 text-[#04364A] text-center">
-                Panduan Yoga
+                Panduan Lari
               </h3>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Temukan tempat yang tenang dan bebas gangguan untuk berlatih
-                  yoga. Pastikan ruangannya cukup luas dan nyaman.
+                  Lakukan pemanasan selama 5 - 10 menit sebelum mulai lari.
+                  Pemanasan bisa berupa jalan cepat, gerakan dinamis, atau
+                  peregangan ringan untuk mengurangi risiko cedera.
                 </span>
               </p>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Matras yoga memberikan kenyamanan dan mencegah cedera. Jika
-                  tidak memiliki matras, gunakan permukaan yang tidak licin.
+                  Mulailah dengan kecepatan yang nyaman. Jangan terlalu cepat di
+                  awal untuk menghindari kelelahan dini. Biarkan tubuh Anda
+                  beradaptasi dengan ritme lari.
                 </span>
               </p>
               <p className="text-[#04364A] mb-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Lakukan pemanasan ringan untuk mempersiapkan tubuh. Beberapa
-                  gerakan pemanasan seperti putaran leher, bahu, dan pergelangan
-                  tangan dapat membantu.
+                  Jaga postur tubuh yang baik. Tegakkan punggung, rilekskan
+                  bahu, dan pandangan ke depan. Hindari membungkuk atau melihat
+                  ke bawah.
                 </span>
               </p>
             </div>
@@ -78,38 +84,28 @@ const ArtikelOlahragaYoga = () => {
 
           <div className="flex flex-wrap mt-24">
             <div className="w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
-              <img src={Gambaryoga2} alt="Gambaryoga2" />
+              <img className="" src={Gambarlari3} alt="Gambar sepeda 4" />
             </div>
             <div className="w-full lg:w-6/12 lg:pl-6">
               <p className="text-[#04364A] mt-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Pernapasan adalah kunci dalam yoga. Usahakan untuk bernapas
-                  dalam dan teratur, melalui hidung. Fokus pada pernapasan dalam
-                  setiap gerakan.
+                  Minumlah air secukupnya sebelum, selama, dan setelah lari.
+                  Jangan tunggu sampai merasa haus karena itu bisa menjadi tanda
+                  awal dehidrasi.
                 </span>
               </p>
               <p className="text-[#04364A] mt-5">
                 <span className="font-semi-bold flex items-center mr-12">
                   <img src={iconring} alt="IconRing" className="mr-2" />
-                  Jangan memaksakan diri dalam melakukan pose. Dengarkan tubuh
-                  Anda dan lakukan modifikasi jika diperlukan. Yoga harus
-                  menyenangkan dan tidak menyebabkan rasa sakit.
-                </span>
-              </p>
-              <p className="text-[#04364A] mt-5">
-                <span className="font-semi-bold flex items-center mr-12">
-                  <img src={iconring} alt="IconRing" className="mr-2" />
-                  Akhiri sesi yoga dengan relaksasi dalam pose Corpse Pose
-                  (Savasana). Berbaringlah terlentang dengan tangan di samping
-                  tubuh, tutup mata, dan fokus pada pernapasan. Pertahankan pose
-                  ini selama 5-10 menit untuk menenangkan tubuh dan pikiran.
+                  Berikan tubuh Anda waktu untuk pulih dengan istirahat yang
+                  cukup. Pastikan tidur yang berkualitas dan hindari latihan
+                  berlebihan yang bisa menyebabkan cedera.
                 </span>
               </p>
             </div>
           </div>
         </div>
-
         <div className="flex items-center justify-center p-12 font-Montserrat">
           <div className="mx-auto w-full max-w-[1080px]">
             <h2 className="mb-5 text-center text-[#04364A] text-3xl font-bold mt-15">
@@ -150,4 +146,4 @@ const ArtikelOlahragaYoga = () => {
   );
 };
 
-export default ArtikelOlahragaYoga;
+export default ArtikelOlahragaLari;

@@ -15,7 +15,7 @@ export default function UploadFoto() {
 
   return (
     <div className="bg-white text-primary font-Montserrat py-3 flex flex-col gap-3">
-      <h1 className="text-sm font-bold text-center">
+      <h1 className="mb-3 block text-base font-bold text-[#07074D]">
         Upload Foto Menarik Dari Kegiatan Kamu
       </h1>
       <div className="bg-eighth flex justify-center items-center h-[180px] lg:h-[398px] rounded-md flex-col gap-3">

@@ -7,6 +7,7 @@ import minggu4 from "../assets/image/minggu4.png";
 
 export default function KategoriBacaBuku() {
   const weeks = [
+
     { src: minggu1, label: "Buku 1", link: "/Buku-1 " },
     { src: minggu2, label: "Buku 2", link: "/Buku-2 " },
     { src: minggu3, label: "Buku 3", link: "/Buku-3 " },

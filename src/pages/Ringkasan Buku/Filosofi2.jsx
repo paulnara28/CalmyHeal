@@ -31,6 +31,9 @@ export default function Filosofi2() {
         ringkasan="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         ringkasan2="Ketenangan batin dan kebahagiaan sejati tercapai ketika kita fokus pada kebaikan dan ..."
         selamat="RINGKASAN FILOSOFI TERAS - END"
+        kembali="/Filosofi-Teras-1"
+        next1="/Berani-Tidak-Disukai"
+        next2="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
         showSelamat={true}
         showButton={false}
         showkonten={false}
