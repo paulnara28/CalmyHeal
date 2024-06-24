@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import populer1 from "../assets/image/populer1.png";
 import populer2 from "../assets/image/populer2.png";
@@ -34,7 +34,17 @@ const populer = [
   },
 ];
 
-export default function Artikelpopuler() {
+const Artikelpopuler = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredPopuler = populer.filter((data) =>
+    data.judul.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12">
       {/* Search bar */}
@@ -44,6 +54,8 @@ export default function Artikelpopuler() {
             type="search"
             placeholder="Cari Artikel berdasarkan judul"
             className="w-[200px] lg:w-[530px] rounded-lg text-xs lg:text-xl py-2 pl-3"
+            value={searchTerm}
+            onChange={handleSearchChange}
           />
         </div>
         <div className="bg-secondary w-24 lg:w-36 rounded-lg flex gap-3 px-3">
@@ -59,7 +71,7 @@ export default function Artikelpopuler() {
         </h1>
         <div>
           <div className="flex flex-col gap-5 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-4">
-            {populer.map((data, index) => (
+            {filteredPopuler.map((data, index) => (
               <a
                 key={data.id}
                 href={data.link}
@@ -96,4 +108,6 @@ export default function Artikelpopuler() {
       </div>
     </div>
   );
-}
+};
+
+export default Artikelpopuler;

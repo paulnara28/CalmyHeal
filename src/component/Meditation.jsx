@@ -1,5 +1,6 @@
 import React from "react";
 import GambarMeditasi from "../assets/image/gambar hero.png";
+import { Link } from "react-router-dom";
 
 export default function Meditation() {
   return (
@@ -24,9 +25,11 @@ export default function Meditation() {
             dan lengkapi rekomendasi harian pilihan Anda untuk terus
             mengembangkan latihan meditasi Anda
           </p>
+          <Link to="/Calmy-Meditation">
           <button className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-xl w-[135px] lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px]">
             Mulai Meditasi
           </button>
+          </Link>
         </div>
       </div>
     </div>

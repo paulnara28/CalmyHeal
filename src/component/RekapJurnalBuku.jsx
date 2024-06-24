@@ -1,51 +1,41 @@
 import React from "react";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
+import Edit from "../assets/image/edit.png";
 import { Link } from "react-router-dom";
-import Edit from "../../assets/image/edit.png";
-import foto1 from "../../assets/image/aktifitas1.png";
-import foto2 from "../../assets/image/aktifitas2.png";
-import foto3 from "../../assets/image/aktifitas3.png";
-import foto4 from "../../assets/image/aktifitas4.png";
-import iconleft1 from "../../assets/image/kiri.png";
+import iconleft1 from "../assets/image/kiri.png";
 
 const data = [
   {
     id: 1,
     tanggal: "8 Mei 2024",
-    foto: foto1,
     deskripsi:
-      "Hari ini saya melakukan olahraga skipping selama 10 menit. Dengan 100 kali...",
+      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
   },
   {
     id: 2,
     tanggal: "9 Mei 2024",
-    foto: foto2,
     deskripsi:
-      "Hari ini saya melakukan olahraga berjalan kaki selama 30 menit di sekitar...",
+      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
   },
   {
     id: 3,
-    tanggal: "9 Mei 2024",
-    foto: foto3,
+    tanggal: "10 Mei 2024",
     deskripsi:
-      "Hari ini saya melakukan kegiatan yoga selama 10 menit sesuai dengan...",
+      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
   },
   {
     id: 4,
-    tanggal: "10 Mei 2024",
-    foto: foto4,
+    tanggal: "11 Mei 2024",
     deskripsi:
-      "Hari ini saya melakukan olahraga berjalan kaki selama 25 menit di sekitar...",
+      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
   },
 ];
 
-function Rekap() {
+function RekapJurnal() {
   return (
     <div>
-      <Navbar />
-      <div className=" text-primary font-Montserrat  p-5 lg:px-20 lg:py-12   ">
-        <Link to="/ChallengeOlahraga">
+      {/* <Navbar /> */}
+      <div className=" text-primary p-5 lg:px-20 lg:py-12">
+        <Link to="/ChallengeBacaBuku">
           <button
             type="button"
             className="flex items-center text-base font-semibold text-[#176B87] rounded-xl outline-none hover:shadow-form "
@@ -54,9 +44,10 @@ function Rekap() {
             Kembali
           </button>
         </Link>
+
         <div className="container md:mx-auto px-10 p-20 mb-5 font-Montserrat">
-          <h1 className="text-2xl font-bold mb-4 mt-4">
-            Rekap Jurnal Aktifitas Olahraga
+          <h1 className="text-2xl font-bold mb-4 mt-4 ">
+            Rekap Jurnal Membaca Buku
           </h1>
           <div className="table-fixed p-8 shadow-lg">
             <div className="overflow-x-auto">
@@ -65,7 +56,7 @@ function Rekap() {
                   <tr>
                     <th className="py-2 px-4 border-b">No</th>
                     <th className="py-2 px-4 border-b">Tanggal</th>
-                    <th className="py-2 px-4 border-b">Foto Harian</th>
+                    <th className="py-2 px-4 border-b"></th>
                     <th className="py-2 px-4 border-b">
                       Hasil catatan kemajuan harian
                     </th>
@@ -80,15 +71,12 @@ function Rekap() {
                       </td>
                       <td className="py-2 px-4 border-b">{entry.tanggal}</td>
                       <td className="py-2 px-4 border-b">
-                        <img
-                          src={entry.foto}
-                          alt={`Foto harian ${entry.id}`}
-                          className="w-16 h-16 "
-                        />
+                        {/* <img src={entry.foto} alt={`Foto harian ${entry.id}`} className="w-16 h-16 object-cover rounded-full" /> */}
                       </td>
+
                       <td className="py-2 px-4 border-b">{entry.deskripsi}</td>
                       <td className="py-2 px-4 border-b text-center">
-                        <Link to="/EditJurnalOlahraga">
+                        <Link to="/EditJurnalBacaBuku">
                           <button className="text-blue-500 hover:text-blue-700">
                             <img src={Edit} alt="edit" />
                           </button>
@@ -116,9 +104,9 @@ function Rekap() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
 
-export default Rekap;
+export default RekapJurnal;

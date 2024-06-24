@@ -15,7 +15,7 @@ export default function CalmyMeditation() {
       <HeroMeditation />
       <MeditasiUntuk
         gambar={ilustrasi}
-        meditasi="Meditsai Untuk Stres"
+        meditasi="Meditasi Untuk Stres"
         penjelasan="Meditasi untuk Mengatasi Stres adalah teknik yang membantu mengelola dan mengurangi stres. Fokus pada pernapasan atau pikiran tenang meredakan kecemasan, menenangkan pikiran dan tubuh, serta meningkatkan kesejahteraan secara keseluruhan."
         reverse={false}
       />
@@ -27,7 +27,7 @@ export default function CalmyMeditation() {
       />
       <MeditasiUntuk
         gambar={ilustrasi3}
-        meditasi="Meditsai Untuk Tidur"
+        meditasi="Meditasi Untuk Tidur"
         penjelasan="Calmy Meditation membantu meraih tidur berkualitas dengan teknik khusus. Fokus pada pernapasan, relaksasi otot, dan pemusatan pikiran menghilangkan hambatan tidur, memberikan pengalaman tidur yang damai dan memulihkan setiap malam."
         reverse={false}
       />

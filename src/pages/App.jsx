@@ -24,6 +24,7 @@ import Artikeledu6 from "./Artikeledu/artikeledu6";
 import Artikeledu7 from "./Artikeledu/artikeledu7";
 import Artikeledu8 from "./Artikeledu/artikeledu8";
 import EditJurnalOlahraga from "./Edit Jurnal Olahraga/EditJurnalOlahraga";
+import EditJurnalBacaBuku from "./Edit Jurnal Baca Buku/EditJurnalBacaBuku";
 import Rekap from "./Rekap/rekap";
 import MeditasiUtama from "./Halaman Utama Meditasi/MeditasiUtama";
 import MeditasiFokus1 from "./Detail Meditasi/Meditasi fokus/MeditasiFokus1";
@@ -44,13 +45,14 @@ import Filosofi2 from "./Ringkasan Buku/Filosofi2";
 import Berani from "./Ringkasan Buku/Berani";
 import Love from "./Ringkasan Buku/Love";
 import Seni from "./Ringkasan Buku/Seni";
-
+import Artikelolahragalari from "./ArtikelOlahragalari/Artikelolahragalari";
+import Artikelolahragarenang from "./ArtikelOlahragarenang/Artikelolahragarenang";
 import Buku1 from "./Detail Baca Buku/Buku1";
 import Buku2 from "./Detail Baca Buku/Buku2";
 import Buku3 from "./Detail Baca Buku/Buku3";
 import Buku4 from "./Detail Baca Buku/Buku4";
-
 import ScrollToTop from "../component/ScrollToTop";
+import RekapJurnalBuku from "./RekapJurnalBuku/RekapJurnalBuku";
 
 export default function App() {
   return (
@@ -87,6 +89,7 @@ export default function App() {
         <Route path="/Artikeledu7" element={<Artikeledu7 />} />
         <Route path="/Artikeledu8" element={<Artikeledu8 />} />
         <Route path="/EditJurnalOlahraga" element={<EditJurnalOlahraga />} />
+        <Route path="/EditJurnalBacaBuku" element={<EditJurnalBacaBuku />} />
         <Route path="/rekap" element={<Rekap />} />
         <Route path="/Kebijakan-Privasi" element={<KebijakanPrivasi />} />
         <Route path="/Meditasi-Utama" element={<MeditasiUtama />} />
@@ -110,15 +113,16 @@ export default function App() {
           path="/Sebuah-Seni-Untuk-Bersikap-Bodo-Amat"
           element={<Seni />}
         />
-        <Route path="/Artikelolahragalari" element={<Artikelolahragayoga />} />
+        <Route path="/Artikelolahragalari" element={<Artikelolahragalari />} />
         <Route
           path="/Artikelolahragarenang"
-          element={<Artikelolahragayoga />}
+          element={<Artikelolahragarenang />}
         />
         <Route path="/Buku-1" element={<Buku1 />} />
         <Route path="/Buku-2" element={<Buku2 />} />
         <Route path="/Buku-3" element={<Buku3 />} />
         <Route path="/Buku-4" element={<Buku4 />} />
+        <Route path="/RekapJurnalBuku" element={<RekapJurnalBuku />} />
       </Routes>
     </Router>
   );

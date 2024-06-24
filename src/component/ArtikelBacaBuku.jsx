@@ -4,6 +4,7 @@ import GambarMembacaBuku from "../assets/image/membacabuku1.png";
 import iconleft1 from "../assets/image/kiri.png";
 
 
+
 export default function ArtikelBacaBuku() {
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12 flex flex-col lg:flex-row gap-8">
@@ -29,7 +30,7 @@ export default function ArtikelBacaBuku() {
           pengetahuan.
         </p>
         <div className="flex justify-end">
-          <Link to=" ">
+          <Link to="/RekapJurnalBuku">
             <button className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-xl w-[135px] lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px]">
               Lihat Rekap
             </button>

@@ -66,7 +66,7 @@ const stres = [
 const tidur = [
   {
     id: 1,
-    judul: "Pengatar Tidur",
+    judul: "Pengantar Tidur",
     kategori: "Focus Stories",
     gambar: tidur1,
     link: "/Meditasi-Tidur-1",
@@ -135,13 +135,13 @@ export default function MainMeditation() {
         {/* Fokus */}
         <div
           id="fokus"
-          className="bg-fourt text-primary font-Montserrat p-5 lg:px-16 lg:py-12"
+          className="bg-fourt text-primary font-Montserrat p-5 lg:px-16 lg:py-12 "
         >
           <h1 className="text-3xl lg:text-4xl">Fokus</h1>
           <div className="flex flex-col gap-5 mt-5 lg:flex-row">
             {fokus.map((data) => (
               <Link to={data.link} key={data.id}>
-                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto">
+                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto hover:bg-secondary hover:border-secondary hover:text-fourt  border border-transparent">
                   <img src={data.gambar} alt={data.judul} />
                   <div className="ml-3 mt-3">
                     <h1 className="text-xl font-bold">{data.judul}</h1>
@@ -161,7 +161,7 @@ export default function MainMeditation() {
           <div className="flex flex-col gap-5 mt-5 lg:flex-row">
             {stres.map((data) => (
               <Link to={data.link} key={data.id}>
-                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto">
+                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto hover:bg-secondary hover:border-secondary hover:text-fourt border border-transparent">
                   <img src={data.gambar} alt={data.judul} />
                   <div className="ml-3 mt-3">
                     <h1 className="text-xl font-bold">{data.judul}</h1>
@@ -181,7 +181,7 @@ export default function MainMeditation() {
           <div className="flex flex-col gap-5 mt-5 lg:flex-row">
             {tidur.map((data) => (
               <Link to={data.link} key={data.id}>
-                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto">
+                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto hover:bg-secondary hover:border-secondary hover:text-fourt  border border-transparent">
                   <img src={data.gambar} alt={data.judul} />
                   <div className="ml-3 mt-3">
                     <h1 className="text-xl font-bold">{data.judul}</h1>
@@ -198,10 +198,10 @@ export default function MainMeditation() {
           className="bg-fourt text-primary font-Montserrat p-5 lg:px-16 lg:py-12"
         >
           <h1 className="text-3xl lg:text-4xl">Suasana Hati</h1>
-          <div className="flex flex-col gap-5 mt-5 lg:flex-row">
+          <div className="flex flex-col gap-5 mt-5 lg:flex-row ">
             {mood.map((data) => (
               <Link to={data.link} key={data.id}>
-                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto">
+                <div className="bg-fifth w-[275px] h-[233px] rounded-md cursor-pointer shadow-md mx-auto hover:bg-secondary hover:border-secondary hover:text-fourt  border border-transparent">
                   <img src={data.gambar} alt={data.judul} />
                   <div className="ml-3 mt-3">
                     <h1 className="text-xl font-bold">{data.judul}</h1>

@@ -105,7 +105,7 @@ const Artikelterbaru = () => {
       >
         {currentItems.map((data) => (
           <Link to={data.link} key={data.id} className="no-underline">
-            <div className="w-[320px] h-[290px] bg-fifth rounded-lg">
+            <div className="w-[320px] h-[330px] bg-fifth rounded-lg">
               <div>
                 <img
                   src={data.gambar}

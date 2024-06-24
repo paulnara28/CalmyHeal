@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Icon from "../assets/icon/Icon";
 
-export default function KontenMeditasi({
+export default function KontenMeditasiKonsentrasiMendalam({
   gambar,
   meditasi,
   judul,
@@ -11,7 +11,7 @@ export default function KontenMeditasi({
   kategori,
 }) {
   
-  const videoUrl = "https://www.youtube.com/embed/mZA-8PdMHPY";
+  const videoUrl = "https://www.youtube.com/embed/vdh7aUYcfZI";
 
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12">
@@ -41,7 +41,7 @@ export default function KontenMeditasi({
           <h1 className="text-base font-bold text-[28px]">
             Meditasi Untuk {meditasi}
           </h1>
-          <h1 className="text-lg font-bold lg:text-[40px]">{judul}</h1>
+          <h1 className="text-lg font-bold lg:text-[38px]">{judul}</h1>
           <p className="text-xs lg:text-xl">{keterangan}</p>
           <div className="flex justify-center gap-7 lg:justify-between mx-2">
             <div className="gap-3 flex flex-row">

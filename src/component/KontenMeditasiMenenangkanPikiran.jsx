@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Icon from "../assets/icon/Icon";
 
-export default function KontenMeditasi({
+export default function KontenMeditasiMenenangkanPikiran({
   gambar,
   meditasi,
   judul,
@@ -10,8 +10,8 @@ export default function KontenMeditasi({
   durasi,
   kategori,
 }) {
-  
-  const videoUrl = "https://www.youtube.com/embed/mZA-8PdMHPY";
+
+  const videoUrl = "https://www.youtube.com/embed/rsEI97wZmCc";
 
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5 lg:px-20 lg:py-12">

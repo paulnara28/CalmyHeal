@@ -1,17 +1,17 @@
 import React from "react";
-import faq from "../assets/image/faq.png";
+import faq from "../assets/image/faqhd.png";
 import Accordion from "./atom/Accordion";
 
 export default function Faq() {
   return (
     <div className="bg-fourt text-primary px-5 py-5 justify-center lg:px-20 lg:py-12 font-Montserrat">
-      <div className="">
+      <div className="mb-5">
         <h1 className="text-base font-bold text-center lg:text-[40px]">
           FAQ's
         </h1>
       </div>
-      <div className="flex flex-col lg:flex-row">
-        <div className=" mx-auto order-1 lg:order-2">
+      <div className="flex flex-col lg:flex-row ">
+        <div className=" mx-auto order-1 lg:order-2 ">
           <img
             src={faq}
             alt="Faq"

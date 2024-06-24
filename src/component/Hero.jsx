@@ -1,5 +1,6 @@
 import React from "react";
 import GambarHero from "../assets/image/hero.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -16,9 +17,11 @@ export default function Hero() {
           kamu, Calmy Heal menyediakan challenge aktifitas sesuai hobi kamu yang
           dapat menyelesaikan permasalahan stres.
         </p>
-        <button className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-xl w-[135px] lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px] text-center no-underline">
-          Mulai Challenge
-        </button>
+        <Link to="/Calmy-Challenge">
+          <button className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-xl w-[135px] lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px]">
+            Mulai Challenge
+          </button>
+        </Link>
       </div>
     </div>
   );

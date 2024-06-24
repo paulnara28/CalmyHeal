@@ -15,7 +15,7 @@ export default function Challenge() {
         <p className="text-sm mt-2 lg:mt-7 mb-6 lg:text-base">
           <span className="font-bold">Calmy Challenge </span>adalah langkah
           pertama menuju hidup yang lebih tenang dan fokus pada kebahagiaan
-          Anda. Ini adalah tantangan 28 hari yang akan membantu Anda
+          Anda. Ini adalah tantangan 30 hari yang akan membantu Anda
           mengembangkan rutinitas harian untuk meningkatkan kesehatan mental dan
           emosional Anda.
         </p>

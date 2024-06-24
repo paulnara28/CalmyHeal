@@ -41,7 +41,6 @@ export default function Filosofi2() {
         showkonten3={false}
         showkonten4={false}
         showkonten5={false}
-        // kembali="/Filosofi-Teras-1"
       />
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
-import KontenMeditasi from "../../../component/KontenMeditasi";
+import KontenMeditasi from "../../../component/KontenMeditasiBernapasRelaksasi";
 import Footer from "../../../component/Footer";
 import gambar from "../../../assets/image/kontenmeditasi6.png";
 
