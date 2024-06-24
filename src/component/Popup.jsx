@@ -14,7 +14,9 @@ const Popup = ({ isVisible, onClose }) => {
         <div className="text-center">
           <img src={image} alt="Success" className="mx-auto mb-4" />
           <h1 className="text-xl font-bold mb-4">Rekap Berhasil Dibuat</h1>
-          <Link>
+          <Link
+          to={"/RekapJurnalBuku"}
+          >
             <button className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-xl w-[135px] lg:text-lg lg:w-[239px] lg:py-3 lg:font-semibold lg:rounded-[28px] text-center no-underline">
               Lihat Rekap
             </button>

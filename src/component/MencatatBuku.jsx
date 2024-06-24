@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Popup from "./Popup";
+import { useParams } from "react-router-dom";
+import { postRekapJurnal } from "../api";
 
 export default function MencatatBuku({ link }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -11,7 +13,30 @@ export default function MencatatBuku({ link }) {
   const handleClosePopup = () => {
     setIsPopupVisible(false);
   };
+  const [dataForm, setDataForm] = useState({
+    user_id: localStorage.getItem("iduser"),
+    notes: "",
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDataForm((prevDataUser) => ({
+      ...prevDataUser,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await postRekapJurnal(dataForm);
+      const detail = response.data.data;
+      console.log(detail);
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (e.g., show an error message)
+    }
+  };
   return (
     <div className="bg-fourt text-primary font-Montserrat p-5">
       <p className="text-base mx-7 font-semibold">
@@ -23,26 +48,30 @@ export default function MencatatBuku({ link }) {
       <h1 className="text-xl font-bold mt-5 text-center">
         Catat Hasil Kemajuan Harian Kamu Disini
       </h1>
-      <div className="lg:w-[1080px] mx-auto mt-5">
-        <textarea
-          className="bg-eighth text-fourt h-52 w-full lg:h-[398px] px-1 align-top rounded-lg"
-          style={{
-            resize: "none",
-            overflowY: "auto",
-            paddingTop: "0.5rem",
-            paddingRight: "0.5rem",
-          }}
-        />
-        <div className="flex justify-end mt-5">
-          <button
-            onClick={handleOpenPopup}
-            className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-lg w-[135px] lg:text-lg lg:w-[150px] lg:py-3 lg:font-semibold lg:rounded-2xl text-center no-underline"
-          >
-            Kirim
-          </button>
-          <Popup isVisible={isPopupVisible} onClose={handleClosePopup} />
+      <form onSubmit={handleSubmit}>
+        <div className="lg:w-[1080px] mx-auto mt-5">
+          <textarea
+            className="bg-eighth text-fourt h-52 w-full lg:h-[398px] px-1 align-top rounded-lg"
+            style={{
+              resize: "none",
+              overflowY: "auto",
+              paddingTop: "0.5rem",
+              paddingRight: "0.5rem",
+            }}
+            name="notes"
+            onChange={handleChange}
+          />
+          <div className="flex justify-end mt-5">
+            <button
+              onClick={handleOpenPopup}
+              className="bg-secondary hover:bg-sixth text-fourt px-2 py-1 rounded-lg w-[135px] lg:text-lg lg:w-[150px] lg:py-3 lg:font-semibold lg:rounded-2xl text-center no-underline"
+            >
+              Kirim
+            </button>
+            <Popup isVisible={isPopupVisible} onClose={handleClosePopup} />
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

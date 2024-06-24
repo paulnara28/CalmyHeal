@@ -1,36 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Edit from "../assets/image/edit.png";
 import { Link } from "react-router-dom";
 import iconleft1 from "../assets/image/kiri.png";
-
-const data = [
-  {
-    id: 1,
-    tanggal: "8 Mei 2024",
-    deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
-  },
-  {
-    id: 2,
-    tanggal: "9 Mei 2024",
-    deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
-  },
-  {
-    id: 3,
-    tanggal: "10 Mei 2024",
-    deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
-  },
-  {
-    id: 4,
-    tanggal: "11 Mei 2024",
-    deskripsi:
-      "Hari ini saya membaca buku “Filosofi teras” oleh Henry Manampiring sampai chap...",
-  },
-];
+import { getRekapJurnal } from "../api";
+import moment from "moment";
 
 function RekapJurnal() {
+  const [rekap, setRekap] = useState([]);
+  const fetchrekap = async () => {
+    try {
+      const response = await getRekapJurnal(
+        `?limit=10&offset=1&search=&sort=created_at ASC&user_id=${localStorage.getItem("iduser")}`
+      );
+      const detail = response.data.data;
+      setRekap(detail);
+    } catch (error) {
+      if (isMounted) {
+        setError(error.message);
+        setIsLoading(false);
+      }
+    }
+  };
+
+  const dataRekap = rekap.map((item) => ({
+    id: item.id,
+    deskripsi: item.notes,
+    tanggal: item.created_at,
+  }));
+
+  useEffect(() => {
+    fetchrekap();
+  }, []);
+
   return (
     <div>
       {/* <Navbar /> */}
@@ -64,19 +65,21 @@ function RekapJurnal() {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map((entry) => (
+                  {dataRekap.map((entry) => (
                     <tr key={entry.id}>
                       <td className="py-2 px-4 border-b text-center">
                         {entry.id}
                       </td>
-                      <td className="py-2 px-4 border-b">{entry.tanggal}</td>
+                      <td className="py-2 px-4 border-b">
+                        {moment(entry.tanggal).format("MMM Do YY")}
+                      </td>
                       <td className="py-2 px-4 border-b">
                         {/* <img src={entry.foto} alt={`Foto harian ${entry.id}`} className="w-16 h-16 object-cover rounded-full" /> */}
                       </td>
 
                       <td className="py-2 px-4 border-b">{entry.deskripsi}</td>
                       <td className="py-2 px-4 border-b text-center">
-                        <Link to="/EditJurnalBacaBuku">
+                        <Link to={`/EditJurnalBacaBuku/${entry.id}`}>
                           <button className="text-blue-500 hover:text-blue-700">
                             <img src={Edit} alt="edit" />
                           </button>

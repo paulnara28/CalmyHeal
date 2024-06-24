@@ -89,7 +89,7 @@ export default function App() {
         <Route path="/Artikeledu7" element={<Artikeledu7 />} />
         <Route path="/Artikeledu8" element={<Artikeledu8 />} />
         <Route path="/EditJurnalOlahraga" element={<EditJurnalOlahraga />} />
-        <Route path="/EditJurnalBacaBuku" element={<EditJurnalBacaBuku />} />
+        <Route path="/EditJurnalBacaBuku/:id" element={<EditJurnalBacaBuku />} />
         <Route path="/rekap" element={<Rekap />} />
         <Route path="/Kebijakan-Privasi" element={<KebijakanPrivasi />} />
         <Route path="/Meditasi-Utama" element={<MeditasiUtama />} />

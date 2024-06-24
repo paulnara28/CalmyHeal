@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/image/logofix.png";
+import { loginUser } from "../../api";
 
 function Login() {
+  const [dataUser, setDataUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDataUser((prevDataUser) => ({
+      ...prevDataUser,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await loginUser(dataUser);
+      const detail = response.data.data;
+      localStorage.setItem("token", detail.token);
+      localStorage.setItem("iduser", detail.idUse);
+      localStorage.setItem("nama", detail.name);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1500);
+      console.log(detail);
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (e.g., show an error message)
+    }
+  };
+
   return (
     <div className="h-screen md:flex font-Montserrat">
       <div
@@ -18,7 +50,7 @@ function Login() {
       </div>
 
       <div className="flex md:w-1/2 justify-center py-10 items-center bg-white ">
-        <form className="bg-white">
+        <form className="bg-white" onSubmit={handleSubmit}>
           <h1 className="text-gray-800 font-bold text-2xl mb-5">
             Masuk ke Akun Anda
           </h1>
@@ -43,6 +75,7 @@ function Login() {
               name="email"
               id="email"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
@@ -55,6 +88,7 @@ function Login() {
               name="password"
               id="password"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <div className="flex justify-between">
@@ -74,14 +108,12 @@ function Login() {
             </span>
           </div>
 
-          <Link to="/">
-            <button
-              type="submit"
-              className="block w-full bg-[#02607E] mt-4 py-2 rounded-2xl text-white font-semibold mb-6"
-            >
-              Masuk
-            </button>
-          </Link>
+          <button
+            type="submit"
+            className="block w-full bg-[#02607E] mt-4 py-2 rounded-2xl text-white font-semibold mb-6"
+          >
+            Masuk
+          </button>
           <div>
             <span className="text-sm ml-4">Belum Punya Akun?</span>
             <Link to="/register">

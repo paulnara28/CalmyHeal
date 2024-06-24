@@ -1,8 +1,37 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/image/logofix.png";
+import { registerUser } from "../../api";
 
 function Register() {
+  const [dataUser, setDataUser] = useState({
+    email: "",
+    password: "",
+    nama: "",
+    notelp: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDataUser((prevDataUser) => ({
+      ...prevDataUser,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await registerUser(dataUser);
+      const detail = response.data.data;
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 1500);
+      console.log(detail);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
   return (
     <div className="h-screen md:flex font-Montserrat">
       <div
@@ -18,7 +47,7 @@ function Register() {
       </div>
 
       <div className="flex md:w-1/2 justify-center py-10 items-center bg-white ">
-        <form className="bg-white">
+        <form className="bg-white" onSubmit={handleSubmit}>
           <h1 className="text-gray-800 font-bold text-2xl mb-5">
             Daftar Akun Sekarang
           </h1>
@@ -40,9 +69,10 @@ function Register() {
             <input
               className="pl-2 outline-none border-none w-full"
               type="text"
-              name="Nama Lengkap"
+              name="nama"
               id="namaLengkap"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
@@ -55,6 +85,7 @@ function Register() {
               name="email"
               id="email"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
@@ -64,9 +95,10 @@ function Register() {
             <input
               className="pl-2 outline-none border-none"
               type="nohp"
-              name="nohp"
+              name="notelp"
               id="nohp"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <label className="block text-md mb-2 my-3" htmlFor="email">
@@ -79,6 +111,7 @@ function Register() {
               name="password"
               id="password"
               placeholder=""
+              onChange={handleChange}
             />
           </div>
           <div className="flex justify-between">
@@ -98,19 +131,17 @@ function Register() {
             </span>
           </div>
 
-          <Link to="/Login">
             <button
               type="submit"
               className="block w-full bg-[#02607E] mt-4 py-2 rounded-2xl text-white font-semibold mb-2"
             >
               Daftar
             </button>
-          </Link>
           <div>
             <span className="text-sm ml-8"> Sudah Punya Akun?</span>
             <Link to="/Login">
               <span className="text-sm ml-2 text-[#3431A2] hover:text-blue-500 cursor-pointer">
-              Masuk Sekarang
+                Masuk Sekarang
               </span>
             </Link>
           </div>
